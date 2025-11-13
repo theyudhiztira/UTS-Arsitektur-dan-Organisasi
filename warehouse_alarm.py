@@ -39,7 +39,7 @@ def display_analysis(
     kondisi_b: int,
 ) -> None:
     """Display detailed circuit analysis"""
-    print(f"   Input Status:")
+    print("   Input Status:")
     print(f"   Pintu Utama (P): {p} ({'Terbuka' if p else 'Tertutup'})")
     print(f"   Sensor Gerak (G): {g} ({'Aktif' if g else 'Tidak Aktif'})")
     print(f"   Jendela Belakang (J): {j} ({'Terbuka' if j else 'Tertutup'})")
@@ -229,7 +229,7 @@ def run_interactive_mode() -> None:
 
 def main() -> None:
     print("WAREHOUSE SECURITY ALARM SYSTEM")
-    print("Arsitektur dan Organisasi")
+    print("\nArsitektur dan Organisasi")
     print("Kelompok 6")
     print("=" * 60)
     print("\nSkenario Sistem Keamanan Gudang:")
