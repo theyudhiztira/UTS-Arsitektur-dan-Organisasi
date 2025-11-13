@@ -12,10 +12,6 @@ def XOR(a: int, b: int) -> int:
 
 
 def full_adder(A: int, B: int, Cin: int) -> tuple[int, int]:
-    """
-    Simulasi logika Full Adder
-    Returns: (Sum, Cout)
-    """
     sum_bit = XOR(XOR(A, B), Cin)
     carry_out = OR(AND(A, B), AND(XOR(A, B), Cin))
 
@@ -23,10 +19,6 @@ def full_adder(A: int, B: int, Cin: int) -> tuple[int, int]:
 
 
 def ripple_carry_adder_4bit(dataA: str, dataB: str) -> tuple[str, int]:
-    """
-    Penjumlahan biner 4-bit menggunakan ripple carry adder
-    Returns: (Sum 4-bit, Carry-out)
-    """
     if len(dataA) != 4 or len(dataB) != 4:
         raise ValueError("Input harus berupa string biner 4-bit")
 
@@ -53,7 +45,6 @@ def ripple_carry_adder_4bit(dataA: str, dataB: str) -> tuple[str, int]:
 
 
 def display_step_by_step(dataA: str, dataB: str) -> None:
-    """Tampilkan proses penjumlahan step by step"""
     carry = 0
     result_bits = []
 
@@ -83,7 +74,6 @@ def display_step_by_step(dataA: str, dataB: str) -> None:
 
 
 def get_binary_input(prompt: str) -> str:
-    """Get 4-bit binary input from user"""
     while True:
         try:
             binary_str = input(prompt).strip()
@@ -105,7 +95,6 @@ def get_binary_input(prompt: str) -> str:
 
 
 def run_test_case() -> None:
-    """Jalankan test case dari soal"""
     print("\nTEST CASE (Dari Soal):")
     print("1101₂ (13 desimal) + 0011₂ (3 desimal)")
     print("=" * 50)
@@ -123,7 +112,6 @@ def run_test_case() -> None:
 
 
 def run_interactive_mode() -> None:
-    """Mode interaktif untuk input user"""
     while True:
         print(f"\n{'=' * 50}")
         print("MODE INTERAKTIF")
